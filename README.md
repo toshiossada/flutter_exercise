@@ -1,16 +1,53 @@
-# formfun_flutter_test
+# Flutter UI Exercises
 
-A new Flutter project.
+This repository contains two UI exercises to be implemented using Flutter and Widgetbook.
+
+## Requirements
+
+- Dart SDK: `3.9.2`
+- Flutter SDK
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+1. Fork this repository
+2. Clone your forked repository
+3. Install dependencies and run the project
 
-A few resources to get you started if this is your first Flutter project:
+**Important:** Commit your progress regularly throughout the development process.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Design & Assets
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+**Design:** [Figma](https://www.figma.com/design/ObMbtPPyWu7VjjMaus2Hpx/Flutter-Dev---Exercice?node-id=1-1326&t=FtXZZ0dtQZZxLNjj-0)
+
+**Assets:** [Google Drive](https://drive.google.com/drive/folders/1_BeEUqMfPyeodtvOz2m-tJq4ieqaLi-C)
+
+## Exercises
+
+### Exercise 1: Interactive Card with Percentage Border
+
+**File:** `lib/exercise_1.dart`
+
+Implement a card component with:
+- Lottie animated icon
+- Primary text and subtext
+- A square with an animated border that fills based on slider percentage (0-100%)
+- Interactive slider control with KNOBS.
+
+### Exercise 2: Scrollable Content Card with Bottom Blur
+
+**File:** `lib/exercise_2.dart`
+
+Implement a scrollable page with:
+- Title at the top
+- Card containing a 16:9 aspect ratio image
+- Content section below the image with icon, title/subtitle, and button
+- Description text
+- Fixed blur effect at the bottom of the viewport
+
+## Submission Guidelines
+
+- Follow the Figma design specifications
+- Ensure responsive behavior across different screen sizes
+- Components must be functional in the Widgetbook environment
+- Commit regularly throughout your development process
+- Submit the link to your forked repository when complete
