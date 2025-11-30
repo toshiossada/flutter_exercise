@@ -1,5 +1,5 @@
 name: widgetbook_workspace
-description: "Form&Fun Flutter Test - Widgetbook Workspace"
+description: 'Form&Fun Flutter Test - Widgetbook Workspace'
 publish_to: 'none'
 version: 0.1.0
 
@@ -11,8 +11,8 @@ dependencies:
     sdk: flutter
   widgetbook: ^3.20.2
   widgetbook_annotation: ^3.9.0
-  formfun_flutter_test:
-    path: ../
+  design_system:
+    path: ../design_system
 
 dev_dependencies:
   flutter_test:
@@ -23,6 +23,6 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-  
+
   assets:
     - assets/
