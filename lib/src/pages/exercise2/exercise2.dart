@@ -14,8 +14,8 @@ class Exercise2Page extends StatelessWidget {
           "Here's your landing page:",
           style: TextStyle(
             fontFamily: 'AktivGrotesk',
-            fontSize: 16,
-            color: Colors.black87,
+            fontSize: 24,
+            color: Colors.black,
           ),
         ),
       ),
