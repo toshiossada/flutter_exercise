@@ -5,8 +5,16 @@ import '../custom_paint/progress_border_custom_paint.dart';
 class FileUploadCardWidget extends StatelessWidget {
   final double progress;
   final VoidCallback? onTap;
+  final String title;
+  final String subtitle;
 
-  const FileUploadCardWidget({super.key, required this.progress, this.onTap});
+  const FileUploadCardWidget({
+    super.key,
+    required this.progress,
+    this.onTap,
+    required this.title,
+    required this.subtitle,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +40,7 @@ class FileUploadCardWidget extends StatelessWidget {
                     ),
                   ],
                 ),
-                child: const Padding(
+                child: Padding(
                   padding: EdgeInsets.all(24.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -46,7 +54,7 @@ class FileUploadCardWidget extends StatelessWidget {
                       ),
                       SizedBox(height: 20),
                       Text(
-                        "Loading File",
+                        title,
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
@@ -55,7 +63,7 @@ class FileUploadCardWidget extends StatelessWidget {
                       ),
                       SizedBox(height: 16),
                       Text(
-                        "1m 30s",
+                        subtitle,
                         style: TextStyle(fontSize: 16, color: Colors.black54),
                       ),
                       SizedBox(height: 24),
