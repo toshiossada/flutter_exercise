@@ -1,7 +1,7 @@
-import 'package:design_system/design_system.dart';
 import 'package:flutter/material.dart';
 
-import 'widgets/controls__widget.dart';
+import 'widgets/controls_widget.dart';
+import 'widgets/file_upload_cart_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -10,11 +10,15 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage>
-    with SingleTickerProviderStateMixin {
-  late final AnimationController _controller = AnimationController(
+class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
+  late final _controller = AnimationController(
     duration: const Duration(seconds: 30, minutes: 1),
     vsync: this,
+  );
+
+  late final _lottieController = AnimationController(
+    vsync: this,
+    duration: const Duration(seconds: 2),
   );
   var _progress = 0.0;
   final stopwatch = Stopwatch();
@@ -28,6 +32,7 @@ class _HomePageState extends State<HomePage>
 
       if (_controller.isCompleted) {
         stopwatch.stop();
+        _lottieController.stop();
       }
     });
   }
@@ -35,6 +40,7 @@ class _HomePageState extends State<HomePage>
   @override
   void dispose() {
     _controller.dispose();
+    _lottieController.dispose();
     super.dispose();
   }
 
@@ -56,11 +62,13 @@ class _HomePageState extends State<HomePage>
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             FileUploadCardWidget(
+              controller: _lottieController,
               title: "Loading File",
               subtitle: subtitleText,
               progress: _progress,
               onTap: () {
                 _controller.forward(from: 0.0);
+                _lottieController.repeat();
                 stopwatch.reset();
                 stopwatch.start();
               },

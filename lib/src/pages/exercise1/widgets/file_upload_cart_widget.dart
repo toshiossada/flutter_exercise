@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 import '../custom_paint/progress_border_custom_paint.dart';
 
@@ -7,6 +8,7 @@ class FileUploadCardWidget extends StatelessWidget {
   final VoidCallback? onTap;
   final String title;
   final String subtitle;
+  final AnimationController controller;
 
   const FileUploadCardWidget({
     super.key,
@@ -14,6 +16,7 @@ class FileUploadCardWidget extends StatelessWidget {
     this.onTap,
     required this.title,
     required this.subtitle,
+    required this.controller,
   });
 
   @override
@@ -22,24 +25,20 @@ class FileUploadCardWidget extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: GestureDetector(
         onTap: onTap,
-        child: SizedBox(
-          width: double.infinity,
+        child: Card(
+          color: Colors.white,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(40),
+            side: BorderSide(
+              color: Colors.purple.withValues(alpha: 0.3),
+              strokeAlign: 2,
+            ),
+          ),
+          shadowColor: Colors.purple,
           child: Stack(
             children: [
-              Container(
+              SizedBox(
                 width: double.infinity,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(40),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.purple.withValues(alpha: 0.3),
-                      blurRadius: 20,
-                      spreadRadius: 5,
-                      offset: const Offset(0, 0),
-                    ),
-                  ],
-                ),
                 child: Padding(
                   padding: EdgeInsets.all(24.0),
                   child: Column(
@@ -47,16 +46,19 @@ class FileUploadCardWidget extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       SizedBox(height: 24),
-                      Icon(
-                        Icons.file_upload_outlined,
-                        size: 48,
-                        color: Colors.black87,
+                      Lottie.asset(
+                        'assets/lottie/searching.json',
+                        height: 80,
+                        controller: controller,
                       ),
-                      SizedBox(height: 20),
+                      SizedBox(height: 16),
+
                       Text(
                         title,
+                        textAlign: TextAlign.center,
                         style: TextStyle(
-                          fontSize: 20,
+                          fontFamily: 'AktivGrotesk',
+                          fontSize: 14,
                           fontWeight: FontWeight.bold,
                           color: Colors.black87,
                         ),
@@ -64,7 +66,13 @@ class FileUploadCardWidget extends StatelessWidget {
                       SizedBox(height: 16),
                       Text(
                         subtitle,
-                        style: TextStyle(fontSize: 16, color: Colors.black54),
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontFamily: 'AktivGrotesk',
+                          fontSize: 12,
+                          fontWeight: FontWeight.w400,
+                          color: Colors.black54,
+                        ),
                       ),
                       SizedBox(height: 24),
                     ],
