@@ -17,21 +17,31 @@ import 'package:widgetbook_workspace/exercise_2.dart'
     as _widgetbook_workspace_exercise_2;
 
 final directories = <_widgetbook.WidgetbookNode>[
-  _widgetbook.WidgetbookComponent(
-    name: 'Exercise1',
-    useCases: [
-      _widgetbook.WidgetbookUseCase(
-        name: 'Default',
-        builder: _widgetbook_workspace_exercise_1.buildExercise1,
+  _widgetbook.WidgetbookFolder(
+    name: 'pages',
+    children: [
+      _widgetbook.WidgetbookComponent(
+        name: 'Exercise1',
+        useCases: [
+          _widgetbook.WidgetbookUseCase(
+            name: 'Default',
+            builder: _widgetbook_workspace_exercise_1.buildExercise1,
+          ),
+        ],
       ),
-    ],
-  ),
-  _widgetbook.WidgetbookComponent(
-    name: 'Exercise2',
-    useCases: [
-      _widgetbook.WidgetbookUseCase(
-        name: 'Default',
-        builder: _widgetbook_workspace_exercise_2.buildExercise2,
+      _widgetbook.WidgetbookFolder(
+        name: 'exercise2',
+        children: [
+          _widgetbook.WidgetbookComponent(
+            name: 'Exercise2Page',
+            useCases: [
+              _widgetbook.WidgetbookUseCase(
+                name: 'Default',
+                builder: _widgetbook_workspace_exercise_2.buildExercise2,
+              ),
+            ],
+          ),
+        ],
       ),
     ],
   ),

@@ -1,0 +1,42 @@
+name: assets
+description: 'A new Flutter package project.'
+version: 0.0.1
+
+environment:
+  sdk: ^3.10.1
+  flutter: '>=1.17.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  assets:
+    - assets/images/
+    - assets/lottie/
+  fonts:
+    - family: AktivGrotesk
+      fonts:
+        - asset: assets/font/AktivGrotesk_Hair.ttf
+          weight: 100
+        - asset: assets/font/AktivGrotesk_Th.ttf
+          weight: 200
+        - asset: assets/font/AktivGrotesk_Lt.ttf
+          weight: 300
+        - asset: assets/font/AktivGrotesk_Rg.ttf
+          weight: 400
+        - asset: assets/font/AktivGrotesk_Md.ttf
+          weight: 500
+        - asset: assets/font/AktivGrotesk_SBd.ttf
+          weight: 600
+        - asset: assets/font/AktivGrotesk_Bd.ttf
+          weight: 700
+        - asset: assets/font/AktivGrotesk_XBd.ttf
+          weight: 800
+        - asset: assets/font/AktivGrotesk_Blk.ttf
+          weight: 900

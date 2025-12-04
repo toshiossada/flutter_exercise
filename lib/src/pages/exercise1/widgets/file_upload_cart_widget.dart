@@ -8,7 +8,7 @@ class FileUploadCardWidget extends StatelessWidget {
   final VoidCallback? onTap;
   final String title;
   final String subtitle;
-  final AnimationController controller;
+  final AnimationController? controller;
 
   const FileUploadCardWidget({
     super.key,
@@ -16,7 +16,7 @@ class FileUploadCardWidget extends StatelessWidget {
     this.onTap,
     required this.title,
     required this.subtitle,
-    required this.controller,
+    this.controller,
   });
 
   @override
@@ -48,6 +48,7 @@ class FileUploadCardWidget extends StatelessWidget {
                       SizedBox(height: 24),
                       Lottie.asset(
                         'assets/lottie/searching.json',
+                        package: 'assets',
                         height: 80,
                         controller: controller,
                       ),
@@ -58,6 +59,7 @@ class FileUploadCardWidget extends StatelessWidget {
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontFamily: 'AktivGrotesk',
+                          package: 'assets',
                           fontSize: 14,
                           fontWeight: FontWeight.bold,
                           color: Colors.black87,
@@ -69,6 +71,7 @@ class FileUploadCardWidget extends StatelessWidget {
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontFamily: 'AktivGrotesk',
+                          package: 'assets',
                           fontSize: 12,
                           fontWeight: FontWeight.w400,
                           color: Colors.black54,

@@ -19,6 +19,7 @@ class HeaderWidget extends StatelessWidget {
             'assets/images/ff_website.png',
             width: double.infinity,
             fit: BoxFit.cover,
+            package: 'assets',
           ),
           Positioned(
             bottom: 0,
@@ -33,6 +34,7 @@ class HeaderWidget extends StatelessWidget {
                     SvgPicture.asset(
                       'assets/images/icon_html.svg',
                       width: 32,
+                      package: 'assets',
                     ),
                     const SizedBox(width: 12),
                     Expanded(
@@ -52,6 +54,7 @@ class HeaderWidget extends StatelessWidget {
                             'HTML',
                             style: TextStyle(
                               fontFamily: 'AktivGrotesk',
+                              package: 'assets',
                               fontSize: 12,
                               color: Colors.grey,
                             ),
@@ -72,6 +75,7 @@ class HeaderWidget extends StatelessWidget {
                         'View',
                         style: TextStyle(
                           fontFamily: 'AktivGrotesk',
+                          package: 'assets',
                           color: Colors.white,
                           fontSize: 16,
                           fontWeight: FontWeight.w500,

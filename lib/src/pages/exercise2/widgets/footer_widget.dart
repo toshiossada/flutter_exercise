@@ -22,6 +22,7 @@ class FooterWidget extends StatelessWidget {
                 child: Image.asset(
                   'assets/images/ff_logo.png',
                   fit: BoxFit.cover,
+                  package: 'assets',
                 ),
               ),
             ),
@@ -34,6 +35,7 @@ class FooterWidget extends StatelessWidget {
                   'Form&Fun',
                   style: TextStyle(
                     fontFamily: 'AktivGrotesk',
+                    package: 'assets',
                     fontWeight: FontWeight.w800,
                     fontSize: 15,
                     color: Colors.black,
@@ -43,6 +45,7 @@ class FooterWidget extends StatelessWidget {
                   'formandfun.co',
                   style: TextStyle(
                     fontFamily: 'AktivGrotesk',
+                    package: 'assets',
                     fontWeight: FontWeight.w400,
                     fontSize: 13,
                     color: Colors.grey,

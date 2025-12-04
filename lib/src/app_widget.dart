@@ -7,6 +7,7 @@ class AppWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // return const MaterialApp(home: HomePage());
     return const MaterialApp(home: Exercise2Page());
   }
 }
